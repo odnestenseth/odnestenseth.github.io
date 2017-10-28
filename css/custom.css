@@ -20,9 +20,6 @@ body {
     margin-top: 5px;
 }
 
-.stats {
-    font-style: italic;
-}
 
 .compcardgallerybig {
     float: left;
@@ -47,11 +44,11 @@ body {
     column-gap: 0;
 }
 
-.compcard table tr td {
+.stats tr td {
     display: inline-block;
     margin: 0;
     padding: 0;
-    width: 33%;
+    width: 32.6%;
 }
 
 table td,
