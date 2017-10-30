@@ -30,7 +30,6 @@ body {
 .compcardgallerysmalls img {
     width: 100%;
     -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     border-right: 0.2em solid white;
     border-left: 0.2em solid white;
@@ -187,7 +186,7 @@ textarea {
 
 @media print {
     h4 {
-        page-break-after: avoid;
+        -webkit-column-break-after: avoid;
         break-after: avoid;
     }   
 }
