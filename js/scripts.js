@@ -12,30 +12,30 @@ $(document).ready(function () {
 
     });
 
-    $('#contactForm').on('submit', function (e) {
+    $("#contactForm").on("submit", function (e) {
         e.preventDefault();
 
-        var name = $('#name').val();
-        var email = $('#email').val();
-        var message = $('#message').val();
+        var name = $("#name").val();
+        var email = $("#email").val();
+        var message = $("#message").val();
 
         $.ajax({
-            url: 'https://formspree.io/odne.stenseth@gmail.com',
-            method: 'POST',
+            url: "https://formspree.io/odne.stenseth@gmail.com",
+            method: "POST",
             data: {
                 name: name,
                 _replyto: email,
                 email: email,
                 message: message,
-                _subject: 'Contact Form Submission from ' + name,
+                _subject: "Contact Form Submission from " + name,
             },
             dataType: "json",
 
         });
 
-        $('#contactForm :input').prop('disabled', true);
-        $('#contactForm').css("display", "none");
-        $('#thankYou').css("display", "block");
+        $("#contactForm :input").prop("disabled", true);
+        $("#contactForm").css("display", "none");
+        $("#thankYou").css("display", "block");
     });
 
 });
