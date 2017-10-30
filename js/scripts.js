@@ -27,9 +27,9 @@ $(document).ready(function () {
                 _replyto: email,
                 email: email,
                 message: message,
-                _subject: "Contact Form Submission from " + name,
+                _subject: "Contact Form Submission from " + name
             },
-            dataType: "json",
+            dataType: "json"
 
         });
 
