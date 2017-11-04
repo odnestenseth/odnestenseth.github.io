@@ -1,0 +1,9 @@
+User-Agent: *
+Disallow: 
+Disallow: /images/vulnerable_progressive_thumbnail.jpg
+Disallow: /images/sultry_progressive_thumbnail.jpg
+Disallow: /images/commercial_progressive_thumbnail.jpg
+Disallow: /images/neutral_progressive_thumbnail.jpg
+Disallow: /images/smile_progressive_thumbnail.jpg
+
+Sitemap: http://www.odnestenseth.com/sitemap.xml
