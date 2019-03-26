@@ -39,13 +39,24 @@ body {
 
 .stats {
     margin-bottom: 8px;
+    margin-left: 3px;
 }
 
 .stats tr td {
     display: inline-block;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    width: 32.6%;
+    padding-right: 3px;
+    width: 16.3%;
+}
+
+.stats tr td:nth-child(odd) {
+    text-align: right;
+}
+
+.stats tr td:nth-child(even) {
+    text-align: left;
 }
 
 table td,
@@ -175,8 +186,9 @@ textarea {
     }
     
     .stats {
-    margin-bottom: 20px;
-}
+        margin-bottom: 20px;
+        margin-left: 0px;
+    }
 
     .compcard table tr td {
         display: table-cell;
