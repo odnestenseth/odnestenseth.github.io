@@ -37,5 +37,7 @@ $(document).ready(function () {
         $("#contactForm").css("display", "none");
         $("#thankYou").css("display", "block");
     });
+}
+
 
 });
