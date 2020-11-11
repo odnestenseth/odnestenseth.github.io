@@ -106,6 +106,17 @@ textarea {
     max-width: 100%;
 }
 
+.bodyimage {
+    width: 33%;
+    height: auto;
+    padding: 0;
+    margin: -1px;
+}
+
+blockquote {
+    font-style: italic;
+}
+
 .embed-container iframe,
 .embed-container object,
 .embed-container embed {
@@ -115,6 +126,10 @@ textarea {
     width: 100%;
     height: 100%;
     border: none;
+}
+
+blockquote {
+    color: #566573;
 }
 
 /* Contact Form Popup */
@@ -184,7 +199,7 @@ textarea {
         padding-left: 20px;
         padding-right: 20px;
     }
-    
+
     .stats {
         margin-bottom: 20px;
         margin-left: 0px;
