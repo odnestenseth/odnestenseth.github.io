@@ -13,6 +13,7 @@ ul.tab-nav li a.button {
     border-bottom-right-radius: 0;
     margin-bottom: -1px;
     border-bottom: none;
+    text-align: center;
 }
 
 ul.tab-nav li a.active.button {
@@ -29,12 +30,12 @@ ul.tab-nav li a.active.button {
 
 @media (max-width: 615px) {
     ul.tab-nav li a.button {
-        width: 32.5%
+        width: 32%
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 420px) {
     ul.tab-nav li a.button {
-        padding: 0px;
+        padding: 0px !important;
     }
 }
