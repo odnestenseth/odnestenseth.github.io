@@ -113,6 +113,21 @@ textarea {
     margin: -1px;
 }
 
+.laurel {
+    display: inline-block;
+    text-align: center; 
+    width: 32.5%;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+
+.laurelimage {
+    width: auto;
+    height: auto;
+    max-width: 100px;
+}
+
 blockquote {
     font-style: italic;
 }
@@ -216,6 +231,16 @@ blockquote {
     .popup {
         width: 50%;
     }
+    
+    .laurel {
+        display: inline-block;
+        text-align: center; 
+        width: 19.5%;
+        margin: 0px;
+        padding: 0px;
+        border: none;
+        font-size: 0.8em;
+    }
 
 }
 
@@ -224,6 +249,7 @@ blockquote {
     .contact {
         width: 100% !important;
     }
+    
 }
 
 @media print {

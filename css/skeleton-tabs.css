@@ -26,3 +26,9 @@ ul.tab-nav li a.active.button {
 .tab-content .tab-pane.active {
     display: block;
 }
+
+@media (max-width: 615px) {
+    ul.tab-nav li a.button {
+        width: 32.5%
+    }
+}
