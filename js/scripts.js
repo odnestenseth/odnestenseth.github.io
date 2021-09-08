@@ -20,7 +20,7 @@ $(document).ready(function () {
         var message = $("#message").val();
 
         $.ajax({
-            url: "https://formspree.io/odne.stenseth@gmail.com",
+            url: "https://formspree.io/f/mgerrqwr",
             method: "POST",
             data: {
                 name: name,
