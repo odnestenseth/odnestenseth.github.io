@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const tabButtons = [].slice.call(document.querySelectorAll('ul.clean-nav li a.button'));
+    let firstPaneOpening = true
 
     tabButtons.map(button => {
         button.addEventListener('click', e => {
@@ -13,6 +14,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const newActivePane = document.querySelector("[id='" + button.getAttribute('paneid') + "']")
             newActivePane.classList.add('active')
+            
+            if(firstPaneOpening) {
+                window.scrollTo({top: button.offsetTop + button.offsetHeight, behavior: "smooth"})
+                firstPaneOpening = false
+            }
 
             const fadeIns = document.getElementsByClassName("fade-in")
             for(const fadeIn of fadeIns) fadeIn.classList.remove("is-visible")
