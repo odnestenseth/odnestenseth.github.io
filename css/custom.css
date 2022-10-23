@@ -1,6 +1,6 @@
 body {
     font-size: 1em;
-    margin-top: 10%;
+    margin-top: 50px;
     padding-bottom: 5%;
 }
 
@@ -43,6 +43,7 @@ body {
 }
 
 .stats tr td {
+    border-bottom: none;
     display: inline-block;
     box-sizing: border-box;
     margin: 0;
@@ -59,6 +60,54 @@ body {
     text-align: left;
 }
 
+
+ul.clean-nav {
+    list-style: none;
+    text-align: center;
+}
+
+ul.clean-nav li {
+    display: inline;
+}
+
+ul.clean-nav li a.button {
+    font-size: 1.3rem;
+    border: none;
+    text-align: center;
+    line-height: unset;
+    margin-top: 20px;
+    padding: none;
+}
+
+ul.clean-nav li a.button:hover {
+    color: black;
+}
+
+ul.clean-nav li a.button.active {
+    color: black;
+}
+
+ul.clean-nav li a.button:after {
+  display:block;
+  content: '';
+  border-bottom: solid 1px #555;  
+  width: 80%;
+  margin: auto;
+  transform: scaleX(0);  
+  transition: transform 150ms ease-in-out;
+
+}
+ul.clean-nav li a.button:hover:after { transform: scaleX(1); }
+
+
+.tab-content .tab-pane {
+    display: none;
+}
+
+.tab-content .tab-pane.active {
+    display: block;
+}
+
 table td,
 table th {
     margin: 5px;
@@ -66,6 +115,7 @@ table th {
 }
 
 .contactdetails {
+    display: none;
     padding-top: 2rem;
     border-top: 1px solid #E1E1E1;
 }
@@ -156,11 +206,8 @@ blockquote {
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.6);
-    visibility: hidden;
     opacity: 0;
-    -webkit-transition: opacity 500ms;
-    -moz-transition: opacity 500ms;
-    transition: opacity 500ms;
+    display: none;
 }
 
 .popup {
@@ -196,6 +243,20 @@ blockquote {
     display: none;
 }
 
+.fade-in {
+    opacity: 0;
+    transform: translateY(20vh);
+    visibility: hidden;
+    transition: opacity 0.6s ease-out, transform 1s ease-out;
+    will-change: opacity, visibility;
+  }
+  .fade-in.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+  }
+
+
 /* Larger than tablet */
 
 @media (min-width: 750px) {
@@ -224,7 +285,6 @@ blockquote {
     .compcard table tr td {
         display: table-cell;
         width: auto;
-        border-bottom: none;
         text-align: center;
     }
 
