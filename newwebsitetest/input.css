@@ -1,0 +1,255 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body {
+    font-family: "Raleway", sans-serif;
+    font-size: 12px;
+}
+
+.animate-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+    .sidebar.open {
+        transform: translateX(0);
+    }
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+}
+
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.shopify-buy__collection-products {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 2rem;
+    padding-bottom: 1rem;
+    flex-direction: column;
+}
+
+.shopify-buy__product {
+    width: 100%;
+    max-width: 1000px;
+    scroll-snap-align: start;
+    display: flex;
+    align-items: center;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    padding: .75rem;
+}
+
+.shopify-buy__product-img-wrapper {
+    width: 75px;
+    min-width: 75px;
+    height: 75px;
+    margin-right: 1rem;
+    display: none;
+}
+
+@media(min-width:500px) {
+    .shopify-buy__product-img-wrapper {
+        display:block;
+    }
+}
+
+.shopify-buy__product__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.shopify-buy__product__title {
+    flex-grow: 1;
+    font-size: 1.25rem;
+    font-size: 1.1rem;
+    line-height: 1.7rem;
+}
+.shopify-buy__product__price {
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #4c4c4c;
+}
+
+
+/* Custom scrollbar for Webkit browsers */
+.shopify-buy__collection-products::-webkit-scrollbar {
+    height: 8px;
+}
+
+.shopify-buy__collection-products::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.shopify-buy__collection-products::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.shopify-buy__collection-products::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+.shopify-buy__btn.shopify-buy__collection-pagination-button  {
+    display: none;
+    margin: 15px auto
+}
+.shopify-buy__btn.shopify-buy__collection-pagination-button.is-active {
+  display: block;
+}
+
+.visuallyhidden {
+    border: 0;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+
+.shopify-buy__btn  {
+     @apply bg-black text-white py-3 px-8 rounded-full text-sm md:text-lg font-semibold hover:bg-gray-800 transition duration-300 min-w-[130px] md:min-w-[150px] 
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    max-width: 600px;
+    margin: 0 auto;
+    height: 200px; /* Adjust this value based on your needs */
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 100%;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    padding: 0 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+
+.carousel-control.prev {
+    left: -10px;
+}
+
+.carousel-control.next {
+    right: -10px;
+}
+
+.carousel-item p {
+    margin: 0;
+}
+
+.carousel-item p:first-child {
+    margin-bottom: 1rem;
+}
+
+.mastfoot {
+    display: none !important;
+}
+
+.btn-primary {
+    @apply !bg-black !text-white !border-none !rounded-full !text-lg !font-semibold hover:!bg-gray-200 hover:!text-black !transition !duration-300;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400 !important;
+    width: 100% !important;
+}
+
+.emailoctopus-success-message,
+.emailoctopus-error-message {
+    @apply !text-white;
+}
+
+#field_0 {
+    @apply !w-full !px-4 !py-2 !rounded-full !mb-2 focus:!outline-none focus:!ring-2 focus:!ring-white;
+    height: unset;
+}
+
+.form-group,
+[data-form="fea14b26-3586-11ef-a765-1966d8196aff"] .form-group {
+    margin-bottom: none !important;
+}
+
+@media(min-width: 765px) {
+    .inline-container {
+        width: 100%;
+    }
+
+    #field_0 {
+        @apply !mb-0;
+        flex-grow: 1;
+    }
+
+    .btn-primary {
+        width: unset !important;
+        margin-bottom: 0 !important;
+    }
+
+    [data-form="fea14b26-3586-11ef-a765-1966d8196aff"] .mb-2 {
+        margin-bottom: 0 !important;
+    }
+
+    .emailoctopus-form-wrapper {
+        margin-top: 0 !important;
+    }
+}
