@@ -156,6 +156,8 @@ body {
     right: 0;
     z-index: 2147483646;
     min-height: 100vh;
+    max-height: 100vh;
+    overflow-y: scroll;
     padding: 10px;
     padding-bottom: 30px;
     border-radius: 20px;
@@ -295,6 +297,7 @@ body {
 
 .shopify-buy__cart-scroll {
     flex-grow: 1;
+    overflow-y: scroll;
 }
 
 .shopify-buy__cart__header .shopify-buy__btn--close {
