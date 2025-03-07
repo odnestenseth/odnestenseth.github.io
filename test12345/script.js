@@ -58,7 +58,30 @@ var client = ShopifyBuy.buildClient({
                       notice: "",
                       button: "Checkout"
                   },
-
+                  events: {
+                    afterInit: function (cart) {
+                      const targetElement = cart.node
+                  
+                      const observer = new MutationObserver((mutations) => {
+                      if (targetElement.classList.contains('is-visible')) {
+                          document.body.classList.add('is-active');
+                      } else {
+                          document.body.classList.remove('is-active');
+                      }
+                      });
+                  
+                      observer.observe(targetElement, {
+                        attributes: true,
+                        attributeFilter: ['class']
+                      });
+                  
+                  
+                      if (targetElement.classList.contains('is-visible')) {
+                        document.body.classList.add('is-active');
+                      }
+                      
+                    }
+                }
               },
               modal: {
                 iframe: false
@@ -109,6 +132,8 @@ var client = ShopifyBuy.buildClient({
               document.getElementById("short-term-collection-no-class-msg").style.display = "block";
           }
       });
+
+
   });
 
 
@@ -227,3 +252,5 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('class-listings').scrollIntoView({behavior: 'smooth', block: "center"});
     });
 });
+
+
