@@ -1,3 +1,23 @@
+
+let scrollPosition = 0;
+
+function lockScroll() {
+  scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+  document.body.style.overflow = 'hidden';
+  document.body.style.position = 'fixed';
+  document.body.style.top = `-${scrollPosition}px`;
+  document.body.style.width = '100%';
+}
+
+
+function unlockScroll() {
+    document.body.style.overflow = '';
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+    window.scrollTo(0, scrollPosition);
+}
+
 // Shopify Buy Button setup
 var client = ShopifyBuy.buildClient({
     domain: 'odnestensethtest.myshopify.com',
@@ -43,6 +63,11 @@ var client = ShopifyBuy.buildClient({
                           'color': '#e2e8f0',
                           'margin-top': '0',
                       }
+                  },
+                  events: {
+                    openModal: function () {
+                        lockScroll()
+                    }
                   }
               },
               toggle: {
@@ -60,32 +85,37 @@ var client = ShopifyBuy.buildClient({
                   },
                   events: {
                     afterInit: function (cart) {
-                      const targetElement = cart.node
-                  
-                      const observer = new MutationObserver((mutations) => {
-                      if (targetElement.classList.contains('is-visible')) {
-                          document.body.classList.add('is-active');
-                      } else {
-                          document.body.classList.remove('is-active');
-                      }
-                      });
-                  
-                      observer.observe(targetElement, {
-                        attributes: true,
-                        attributeFilter: ['class']
-                      });
-                  
-                  
-                      if (targetElement.classList.contains('is-visible')) {
-                        document.body.classList.add('is-active');
-                      }
-                      
+                        const oldOpen = cart.open;
+                        cart.open = function() {
+                          lockScroll()
+                          oldOpen.call(this)
+                        }
+                        
+                        const oldClose = cart.close
+                        cart.close = function() {
+                            unlockScroll()
+                            oldClose.call(this)
+                          }
+
+                          const oldToggleVisibility = cart.toggleVisibility
+                          cart.toggleVisibility = function() {
+                            cart.isVisible ? unlockScroll() : lockScroll()
+                            oldToggleVisibility.call(this)
+                          }
+
+                        //document.querySelector(".shopify-buy__cart-toggle").addEventListener("click", () => lockScroll())
                     }
                 }
               },
               modal: {
-                iframe: false
+                iframe: false,
+                events: {
+                    closeModal: function () {
+                        unlockScroll()
+                    }
+                  }
               },
+              
               modalProduct: {
                   contents: {
                       imgWithCarousel: false,
@@ -252,5 +282,6 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('class-listings').scrollIntoView({behavior: 'smooth', block: "center"});
     });
 });
+
 
 
