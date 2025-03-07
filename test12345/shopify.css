@@ -2,6 +2,13 @@
 :root {
     --dark-blue: #0f172a;
     --accent: #f43f5e;
+    --unit-100vh: 100vh;
+}
+
+@supports (height: 100dvh) {
+    :root {
+        --unit-100vh: 100dvh;
+    }
 }
 
 body {
@@ -155,8 +162,8 @@ body {
     left: 0;
     right: 0;
     z-index: 2147483646;
-    min-height: 100vh;
-    max-height: 100vh;
+    min-height: var(--unit-100vh);
+    max-height: var(--unit-100vh);
     overflow-y: scroll;
     padding: 10px;
     padding-bottom: calc(env(safe-area-inset-bottom, 20px) + 20px);
@@ -467,12 +474,3 @@ text-align: center;
 }
 .mastfoot {display:none}
 
-
-
-    body.is-active2 {
-      overflow: hidden;
-      position: fixed;
-      height: 100vh;
-      -webkit-transition: all 0s;
-      transition: all 0s;
-    }
