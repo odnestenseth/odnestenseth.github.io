@@ -465,7 +465,7 @@ text-align: center;
 
 
     body.is-active {
-      overflow-y: hidden;
+      overflow: hidden;
       position: fixed;
       height: 100vh;
       -webkit-transition: all 0s;
