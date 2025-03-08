@@ -87,8 +87,8 @@ var client = ShopifyBuy.buildClient({
                     afterInit: function (cart) {
                         const oldOpen = cart.open;
                         cart.open = function() {
-                          lockScroll()
-                          oldOpen.call(this)
+                            if(screen.width <= 640) lockScroll()
+                            oldOpen.call(this)
                         }
                         
                         const oldClose = cart.close
