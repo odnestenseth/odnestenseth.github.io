@@ -6,4 +6,6 @@ Disallow: /images/commercial_progressive_thumbnail.jpg
 Disallow: /images/neutral_progressive_thumbnail.jpg
 Disallow: /images/smile_progressive_thumbnail.jpg
 
+Disallow: /test12345/
+
 Sitemap: http://www.odnestenseth.com/sitemap.xml
