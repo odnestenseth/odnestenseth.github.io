@@ -109,10 +109,6 @@
         <h2>Development Access</h2>
         
         <form id="loginForm">
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
-            </div>
             
             <div class="form-group">
                 <label for="password">Password</label>
@@ -136,20 +132,17 @@
         document.getElementById('loginForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
             const errorMessage = document.getElementById('errorMessage');
             
             // Simple validation - you would replace this with actual auth logic
             // For development purposes, using hardcoded credentials
             const validCredentials = [
-                { username: 'admin', password: 'devpass123' },
-                { username: 'developer', password: 'test12345' },
-                { username: '', password: 'odneisthebest' }
+                { password: 'odneisthebest' }
             ];
             
             const isValid = validCredentials.some(cred => 
-                cred.username === username && cred.password === password
+                cred.password === password
             );
             
             if (isValid) {
@@ -167,7 +160,7 @@
                 }
                 
                 // Redirect to dev area
-                window.location.href = '/test12345/index.html';
+                window.location.href = '/test12345/67123723161236123bdhdwahadwwad.html';
             } else {
                 // Show error
                 errorMessage.style.display = 'block';
