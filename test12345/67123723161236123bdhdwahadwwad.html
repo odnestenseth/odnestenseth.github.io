@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>ODNE STENSETH | TRUE ACTING</title>
+    <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="./font.css">
+    <link rel="stylesheet" href="./shopify.css">
+
+
+    <script src="https://unpkg.com/@tailwindcss/browser@4.0.9/dist/index.global.js"></script>
+    <script src="https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js"></script>
+
+</head>
+<body class="text-white">
+    <!-- Header Section -->
+    <header class="fixed w-screen top-0 z-50 bg-[#0f172a] py-6">
+        <div class="container mx-auto px-4 pr-8 md:px-8 flex justify-between items-center ">
+            <a href="#" class="playfair text-4xl font-bold whitespace-nowrap pr-4">ODNE STENSETH</a>
+            <nav class="hidden md:block">
+                <ul class="flex justify-between w-100">
+                    <li><a href="#about" class="text-gray-300 hover:text-white font-medium uppercase tracking-widest text-sm">About</a></li>
+                    <li><a href="#classes" class="text-gray-300 hover:text-white font-medium uppercase tracking-widest text-sm">Classes</a></li>
+                    <li><a href="#testimonials" class="text-gray-300 hover:text-white font-medium uppercase tracking-widest text-sm">Voices</a></li>
+                    <li><a href="#contact" class="text-gray-300 hover:text-white font-medium uppercase tracking-widest text-sm">Contact</a></li>
+                </ul>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none cursor-pointer">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu Overlay -->
+    <nav id="mobile-menu-overlay" class="md:hidden fixed top-0 left-0 w-full h-full bg-[#0f172a] flex flex-col items-center justify-center space-y-8 text-center z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+        <button id="mobile-menu-close" class="absolute top-6 right-6 text-white text-3xl cursor-pointer">&times;</button>
+        <a href="#about" class="text-gray-300 hover:text-white font-medium uppercase tracking-widest text-xl">About</a>
+        <a href="#classes" class="text-gray-300 hover:text-white font-medium uppercase tracking-widest text-xl">Classes</a>
+        <a href="#testimonials" class="text-gray-300 hover:text-white font-medium uppercase tracking-widest text-xl">Voices</a>
+        <a href="#contact" class="text-gray-300 hover:text-white font-medium uppercase tracking-widest text-xl">Contact</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-48 pb-32 h-screen bg-[#0f172a] relative overflow-hidden">
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <h1 class="playfair text-7xl md:text-9xl font-bold leading-none mb-8">TRUE ACTING</h1>
+                <div class="h-1 w-32 bg-[#f43f5e] mb-12"></div>
+                <p class="text-xl md:text-2xl font-light mb-12 max-w-xl text-gray-300">Discover the transformative power of the Meisner Technique.</p>
+                <a href="#classes" class="inline-block bg-[#f43f5e] text-white px-10 py-5 font-medium uppercase tracking-widest text-sm hover:bg-white hover:text-[#0f172a] transition duration-300">Begin</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="pt-16 pb-0 md:py-32 bg-[#1e293b] scroll-mt-20">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex flex-col md:flex-row items-center md:space-x-20">
+                <div class="md:w-1/2 relative mb-10 mt-0 md:mb-0">
+                    <div class="bg-[#f43f5e] absolute -inset-6 transform -rotate-2"></div>
+                    <img src="./DSC01817.jpg" alt="Acting workshop" class="relative z-10 w-full h-auto">
+                </div>
+                <div class="md:w-1/2 mb-16 md:mb-0">
+                    <h2 class="playfair text-5xl md:text-6xl font-bold mb-8">MEISNER TECHNIQUE</h2>
+                    <div class="h-1 w-24 bg-[#f43f5e] mb-12"></div>
+                    <p class="text-xl leading-relaxed mb-8 text-gray-300">The Meisner Technique empowers actors to get out of their heads and access a profound sense of truth in their work by being present and listening.</p>
+                    <p class="text-xl leading-relaxed mb-8 text-gray-300">The technique employs practical and progressive exercises that train actors to respond truthfully in the moment, liberating them from self-consciousness. At its core is the Repetition Exercise, which teaches actors to observe precisely and respond instinctively to others' behavior rather than fixating on text.</p>
+                    <p class="text-xl leading-relaxed text-gray-300">My classes offer a supportive environment where you can take risks, embrace vulnerability, and develop the authenticity that defines exceptional acting.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="py-16 md:py-32 bg-[#0f172a] scroll-mt-20">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex flex-col md:flex-row items-center md:space-x-20">
+                <div class="md:w-2/3 mb-16 md:mb-0">
+                    <h2 class="playfair text-5xl md:text-6xl font-bold mb-8">ABOUT ME</h2>
+                    <div class="h-1 w-24 bg-[#f43f5e] mb-12"></div>
+                    <p class="text-xl leading-relaxed mb-8 text-gray-300">I have been teaching the Meisner technique since 2018 at prestigious institutions including Royal Central School of Speech and Drama, Giles Foreman Centre for Acting, Fourth Monkey, and The Impulse Company. My work extends to bespoke training programmes, private coaching, and accessible drop-in classes.</p>
+                    <p class="text-xl leading-relaxed text-gray-300">It is of utmost importance to me that I create a safe, encouraging learning environment where students can identify and overcome their artistic barriers. My teaching emphasizes patience, self-compassion, and ownership of one's journey as an actor.</p>
+                </div>
+                <div class="md:w-1/3 relative">
+                    <div class="bg-[#f43f5e] absolute -inset-5 transform rotate-2"></div>
+                    <img src="./Odne-3-WEB.jpg" alt="Acting workshop" class="relative z-10 w-90 h-auto m-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Quote Section -->
+        <section class="py-16 md:py-32 bg-[#1e293b] text-white relative overflow-hidden">
+            <div class="container mx-auto px-4 md:px-8 relative z-10">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="playfair text-4xl md:text-5xl font-bold mb-8">"Acting is living truthfully under given circumstances"</h2>
+                    <div class="h-1 w-24 bg-[#f43f5e] mx-auto mb-8"></div>
+                    <p class="text-2xl italic font-light text-gray-300">— Sanford Meisner</p>
+                </div>
+            </div>
+        </section>
+
+    <!-- Classes Section -->
+    <section id="classes" class="py-16 md:py-32 bg-[#0f172a] scroll-mt-20">
+        <div class="container mx-auto px-4 md:px-8">
+            <h2 class="playfair text-5xl md:text-6xl font-bold text-center mb-8">CLASSES</h2>
+            <div class="h-1 w-24 bg-[#f43f5e] mx-auto mb-24"></div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Drop-In Classes -->
+                <div class="border border-gray-700 p-10 hover-scale cursor-pointer flex flex-col h-full">
+                    <div class="flex-grow">
+                        <div class="text-6xl font-bold text-[#f43f5e] mb-8">01</div>
+                        <h3 class="playfair text-3xl font-bold mb-6">Drop-In Sessions</h3>
+                        <p class="mb-8 text-gray-300 text-lg">Sharpen your repetition skills with this drop-in class. No preparation needed, just rock up!</p>
+                        <ul class="space-y-4 mb-8 text-gray-300">
+                            <li class="flex items-start">
+                                <span class="text-[#f43f5e] mr-3">—</span>
+                                <span>3-hour intensive workshops</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#f43f5e] mr-3">-</span>
+                                <span>Open to anyone who has done an introductory class in Meisner's technique</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#f43f5e] mr-3">—</span>
+                                <span>The ideal way to maintain momentum in your craft</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto">
+                        <button id="show-drop-ins" class="inline-block border border-white text-white px-8 py-4 uppercase text-sm tracking-widest font-medium hover:bg-[#f43f5e] hover:border-[#f43f5e] transition duration-300">See upcoming drop-ins</button>
+                    </div>
+                </div>
+                
+                <!-- Short Courses -->
+                <div class="border border-gray-700 p-10 hover-scale cursor-pointer flex flex-col h-full">
+                    <div class="flex-grow">
+                        <div class="text-6xl font-bold text-[#f43f5e] mb-8">02</div>
+                        <h3 class="playfair text-3xl font-bold mb-6">Short Courses</h3>
+                        <p class="mb-8 text-gray-300 text-lg">Structured courses providing a comprehensive foundation in the Meisner technique and methods for working with authentic emotional connection.</p>
+                        <ul class="space-y-4 mb-8 text-gray-300">
+                            <li class="flex items-start">
+                                <span class="text-[#f43f5e] mr-3">—</span>
+                                <span>Weekly classes for all experience levels</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#f43f5e] mr-3">—</span>
+                                <span>Learn to ground your performance in a sense of truth</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#f43f5e] mr-3">—</span>
+                                <span>Develop the ability to be fully present with your scene partners</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto">
+                        <button id="show-short-courses" class="inline-block border border-white text-white px-8 py-4 uppercase text-sm tracking-widest font-medium hover:bg-[#f43f5e] hover:border-[#f43f5e] transition duration-300">See upcoming courses</button>
+                    </div>
+                </div>
+                
+                <!-- Bespoke Programs -->
+                <div class="border border-gray-700 p-10 hover-scale cursor-pointer flex flex-col h-full">
+                    <div class="flex-grow">
+                        <div class="text-6xl font-bold text-[#f43f5e] mb-8">03</div>
+                        <h3 class="playfair text-3xl font-bold mb-6">Bespoke Programs</h3>
+                        <p class="mb-8 text-gray-300 text-lg">Tailored coaching for professionals, emerging actors, or drama schools seeking specialized training.</p>
+                        <ul class="space-y-4 mb-8 text-gray-300">
+                            <li class="flex items-start">
+                                <span class="text-[#f43f5e] mr-3">—</span>
+                                <span>Customized curriculum based on your specific goals</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#f43f5e] mr-3">—</span>
+                                <span>Flexible group sizes from individuals to full ensembles</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#f43f5e] mr-3">—</span>
+                                <span>Adaptable scheduling to fit your production/term timeline</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto">
+                        <button id="show-bespoke" class="inline-block border border-white text-white px-8 py-4 uppercase text-sm tracking-widest font-medium hover:bg-[#f43f5e] hover:border-[#f43f5e] transition duration-300">Read more</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+            <!-- Class Listing Sections -->
+            <div id="class-listings" class="mt-24">
+                <!-- Drop-in Classes Listing -->
+                <div id="drop-ins-listing" class="hidden">
+                    <h3 class="playfair text-4xl font-bold mb-10 text-center">Upcoming Drop-in Sessions</h3>
+                    <div id="drop-ins-collection" class="shopify-buy-container"></div>
+                    <div id="drop-ins-collection-no-class-msg" class="text-center py-8 hidden">
+                        <p class="text-xl text-gray-300">No upcoming drop-in sessions scheduled at this time. Please check back soon or contact me for more information.</p>
+                    </div>
+                </div>
+                
+                <!-- Short Courses Listing -->
+                <div id="short-courses-listing" class="hidden">
+                    <h3 class="playfair text-4xl font-bold mb-10 text-center">Upcoming Short Courses</h3>
+                    <div id="short-courses-collection" class="shopify-buy-container"></div>
+                    <div id="short-term-collection-no-class-msg" class="text-center py-8 hidden">
+                        <p class="text-xl text-gray-300">No upcoming short courses scheduled at this time. Please check back soon or contact me for more information.</p>
+                    </div>
+                </div>
+                
+                <!-- Bespoke Programs Information -->
+                <div id="bespoke-info" class="hidden">
+                    <h3 class="playfair text-4xl font-bold mb-10 text-center">Bespoke Training Programs</h3>
+                    <div class="bg-gray-900 border border-gray-700 p-12 max-w-3xl mx-auto">
+                        <p class="text-xl text-gray-300 mb-6">My bespoke programs are tailored to meet the specific needs of your organization, company, or individual goals.</p>
+                        <p class="text-xl text-gray-300 mb-6">Whether you're a drama school seeking specialized training for your students, a production company preparing actors for specific roles, or an individual artist looking for personalized coaching, I can design a program that serves your exact requirements.</p>
+                        <p class="text-xl text-gray-300 mb-10">Contact me below to discuss your needs and how I can create a custom curriculum that works for you.</p>
+                        <a href="#contact" class="inline-block border border-white text-white px-8 py-4 uppercase text-sm tracking-widest font-medium hover:bg-[#f43f5e] hover:border-[#f43f5e] transition duration-300">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 md:py-32 bg-[#1e293b] scroll-mt-20">
+        <div class="container mx-auto px-4 md:px-8">
+            <h2 class="playfair text-5xl md:text-6xl font-bold text-center mb-8">VOICES</h2>
+            <div class="h-1 w-24 bg-[#f43f5e] mx-auto mb-24"></div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="p-10 border border-gray-700 group relative overflow-hidden">
+                    <div class="text-4xl text-[#f43f5e] mb-6">"</div>
+                    <p class="text-xl mb-12 text-gray-300">He is adamant at making sure that it is the actor who must feel comfortable enough to discover the answers within themselves through this process. His guidance and style of teaching make it all the more exciting and effective in helping us reach a point of living in the moment... I highly recommend his services if you seriously want to take your craft to the next level.</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-[#f43f5e] mr-4"></div>
+                        <div>
+                            <p class="font-medium">Matthew Mélone</p>
+                            <p class="text-sm text-gray-400">Actor</p>
+                        </div>
+                    </div>
+                </div>
+
+                                
+                <div class="p-10 border border-gray-700 group relative overflow-hidden">
+                    <div class="text-4xl text-[#f43f5e] mb-6">"</div>
+                    <p class="text-xl mb-12 text-gray-300">Really professional, fun and easy to learn from ... the class is an absolute joy".</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-[#f43f5e] mr-4"></div>
+                        <div>
+                            <p class="font-medium">Noga Flaishon</p>
+                            <p class="text-sm text-gray-400">Actor</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="p-10 border border-gray-700 group relative overflow-hidden">
+                    <div class="text-4xl text-[#f43f5e] mb-6">"</div>
+                    <p class="text-xl mb-12 text-gray-300">What I enjoy about Odne's class is how gentle his approach is and how great he is at explaining the technique. The combination ensures a safe playground for me to explore my emotions, but also gives clarity to how I can improve and grow. I always look forward to working with Odne!</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-[#f43f5e] mr-4"></div>
+                        <div>
+                            <p class="font-medium">Kat</p>
+                            <p class="text-sm text-gray-400">Actor</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-32 bg-[#0f172a] scroll-mt-20">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="playfair text-5xl md:text-6xl font-bold text-center mb-8">CONTACT</h2>
+                <div class="h-1 w-24 bg-[#f43f5e] mx-auto mb-24"></div>
+                
+                <form class="border border-gray-700 p-12">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+                        <div>
+                            <label for="name" class="block text-sm uppercase tracking-widest font-medium mb-4">Name</label>
+                            <input type="text" id="name" class="w-full bg-transparent border-b-2 border-gray-600 py-3 focus:border-[#f43f5e] focus:outline-none text-xl" required>
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm uppercase tracking-widest font-medium mb-4">Email</label>
+                            <input type="email" id="email" class="w-full bg-transparent border-b-2 border-gray-600 py-3 focus:border-[#f43f5e] focus:outline-none text-xl" required>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-12">
+                        <label for="message" class="block text-sm uppercase tracking-widest font-medium mb-4">Message</label>
+                        <textarea id="message" rows="4" class="w-full bg-transparent border-b-2 border-gray-600 py-3 focus:border-[#f43f5e] focus:outline-none text-xl" required></textarea>
+                    </div>
+                    
+                    <button id="contact-form-submit" type="submit" class="w-full bg-[#f43f5e] text-white px-8 py-6 font-medium uppercase tracking-widest text-sm hover:bg-white hover:text-[#0f172a] transition duration-300">Send Message</button>
+                    <div id="contact-result-msg" class="opacity-0 transition-opacity duration-250 ease-in-out mt-4"></div>
+                </form>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#1e293b] text-white py-4 border-t border-gray-800 ">
+        <div class="container mx-auto px-4">
+            <div class="w-full md:max-w-fit mx-auto">
+            <script async src="./emailoctopus.js" data-form="fea14b26-3586-11ef-a765-1966d8196aff"></script>
+        </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
