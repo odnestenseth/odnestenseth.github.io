@@ -194,7 +194,7 @@
   <script>
 
     
-window.allWords = [
+window.allWords = Array.from(new Set([
   "apple", "banana", "orange", "grape", "lemon", "melon", "peach", "plum",
   "red", "blue", "green", "yellow", "purple", "orange", "black", "white",
   "dog", "cat", "horse", "cow", "sheep", "goat", "pig", "chicken",
@@ -233,7 +233,7 @@ window.allWords = [
   "dollar", "euro", "pound", "yen", "rupee", "peso", "franc", "currency",
   "fire", "water", "earth", "air", "element", "nature", "force", "energy",
   "eye", "ear", "nose", "mouth", "hand", "foot", "arm", "leg"
-]
+]))
     document.addEventListener('DOMContentLoaded', function() {
       console.log(window.allWords)
       // Game state
@@ -269,10 +269,7 @@ window.allWords = [
         const newWords = []
         for (let i = 0; i < 16; i++) {
           const randomIndex = Math.floor(Math.random() * wordStore.length);
-    
           newWords.push(wordStore[randomIndex]);
-    
-          // Remove the selected word from the copy to avoid duplicates
           wordStore.splice(randomIndex, 1);
         }
 
