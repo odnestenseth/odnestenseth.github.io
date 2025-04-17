@@ -234,6 +234,130 @@ window.allWords = Array.from(new Set([
   "fire", "water", "earth", "air", "element", "nature", "force", "energy",
   "eye", "ear", "nose", "mouth", "hand", "foot", "arm", "leg"
 ]))
+
+window.easyCategories =  [
+  {
+    words: ["Red", "Blue", "Green", "Yellow"],
+    category: "Primary Colors"
+  },
+  {
+    words: ["Winter", "Spring", "Summer", "Fall"],
+    category: "Seasons"
+  },
+  {
+    words: ["Car", "Bus", "Train", "Airplane"],
+    category: "Transportation Methods"
+  },
+  {
+    words: ["Apple", "Banana", "Orange", "Grape"],
+    category: "Fruits"
+  },
+  {
+    words: ["Dog", "Cat", "Hamster", "Fish"],
+    category: "Common Pets"
+  },
+  {
+    words: ["Pizza", "Pasta", "Lasagna", "Risotto"],
+    category: "Italian Foods"
+  },
+  {
+    words: ["Soccer", "Basketball", "Tennis", "Golf"],
+    category: "Sports"
+  },
+  {
+    words: ["Monday", "Tuesday", "Wednesday", "Thursday"],
+    category: "Days of the Week"
+  },
+  {
+    words: ["Chair", "Table", "Couch", "Bed"],
+    category: "Furniture"
+  },
+  {
+    words: ["Shirt", "Pants", "Shoes", "Hat"],
+    category: "Clothing Items"
+  },
+  {
+    words: ["Pencil", "Pen", "Marker", "Crayon"],
+    category: "Writing Implements"
+  },
+  {
+    words: ["Earth", "Mars", "Venus", "Jupiter"],
+    category: "Planets"
+  },
+  {
+    words: ["Doctor", "Teacher", "Firefighter", "Police"],
+    category: "Professions"
+  },
+  {
+    words: ["Piano", "Guitar", "Violin", "Drums"],
+    category: "Musical Instruments"
+  },
+  {
+    words: ["Rose", "Tulip", "Daisy", "Lily"],
+    category: "Flowers"
+  },
+  {
+    words: ["Milk", "Cheese", "Yogurt", "Butter"],
+    category: "Dairy Products"
+  },
+  {
+    words: ["Paper", "Scissors", "Rock", "Lizard"],
+    category: "Rock Paper Scissors Game"
+  },
+  {
+    words: ["Lion", "Tiger", "Elephant", "Giraffe"],
+    category: "Zoo Animals"
+  },
+  {
+    words: ["Salt", "Pepper", "Sugar", "Flour"],
+    category: "Common Kitchen Ingredients"
+  },
+  {
+    words: ["Fork", "Knife", "Spoon", "Chopsticks"],
+    category: "Eating Utensils"
+  },
+  {
+    words: ["Book", "Magazine", "Newspaper", "Journal"],
+    category: "Reading Materials"
+  },
+  {
+    words: ["Ocean", "River", "Lake", "Stream"],
+    category: "Bodies of Water"
+  },
+  {
+    words: ["Phone", "Computer", "Tablet", "Television"],
+    category: "Electronic Devices"
+  },
+  {
+    words: ["Gold", "Silver", "Bronze", "Platinum"],
+    category: "Precious Metals"
+  },
+  {
+    words: ["North", "South", "East", "West"],
+    category: "Directions"
+  },
+  {
+    words: ["Heart", "Diamond", "Club", "Spade"],
+    category: "Card Suits"
+  },
+  {
+    words: ["Eye", "Ear", "Nose", "Mouth"],
+    category: "Facial Features"
+  },
+  {
+    words: ["Oak", "Pine", "Maple", "Birch"],
+    category: "Types of Trees"
+  },
+  {
+    words: ["Breakfast", "Lunch", "Dinner", "Snack"],
+    category: "Meals"
+  },
+  {
+    words: ["Snake", "Lizard", "Turtle", "Crocodile"],
+    category: "Reptiles"
+  }
+];
+
     document.addEventListener('DOMContentLoaded', function() {
       console.log(window.allWords)
       // Game state
@@ -274,7 +398,7 @@ window.allWords = Array.from(new Set([
         }
 
         const wordLists = [
-          newWords.slice(0,4),
+          window.easyCategories[Math.floor(Math.random() * window.easyCategories.length)],
           newWords.slice(4,8),
           newWords.slice(8,12),
           newWords.slice(12,16)
