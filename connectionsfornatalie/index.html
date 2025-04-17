@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Always-Win Connections Game</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #f5f5f5;
+    }
+    
+    .container {
+      max-width: 400px;
+      width: 100%;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    h1 {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    
+    .message {
+      text-align: center;
+      margin-bottom: 15px;
+      font-weight: 500;
+      min-height: 24px;
+    }
+    
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    
+    .word-btn {
+      padding: 10px 5px;
+      height: 48px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+    
+    .word-btn.selected {
+      background-color: #e6f7ff;
+      border-color: #69c0ff;
+    }
+    
+    .completed-group {
+      grid-column: span 4;
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .group-title {
+      font-weight: bold;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+    
+    .group-words {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      gap: 8px;
+    }
+    
+    .groups-container {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    
+    .group {
+      padding: 10px;
+      border-radius: 4px;
+      text-align: center;
+    }
+    
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+    
+    .btn {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .btn-hint {
+      background-color: #1890ff;
+    }
+    
+    .btn-hint:hover {
+      background-color: #40a9ff;
+    }
+    
+    .btn-reset {
+      background-color: #722ed1;
+    }
+    
+    .btn-reset:hover {
+      background-color: #9254de;
+    }
+    
+    .btn:disabled {
+      background-color: #bfbfbf;
+      cursor: not-allowed;
+    }
+    
+    .win-message {
+      text-align: center;
+      color: #52c41a;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+    
+    /* Group colors */
+    .yellow {
+      background-color: #fff7e6;
+      border: 1px solid #ffd591;
+      color: #ad6800;
+    }
+    
+    .green {
+      background-color: #f6ffed;
+      border: 1px solid #b7eb8f;
+      color: #237804;
+    }
+    
+    .blue {
+      background-color: #e6f7ff;
+      border: 1px solid #91d5ff;
+      color: #0050b3;
+    }
+    
+    .purple {
+      background-color: #f9f0ff;
+      border: 1px solid #d3adf7;
+      color: #531dab;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Connections</h1>
+    <div id="message" class="message">Select 4 words that share a connection!</div>
+    
+    <div id="grid" class="grid">
+      <!-- Words will be inserted here by JavaScript -->
+    </div>
+    
+    <div id="groups-container" class="groups-container">
+      <!-- Completed groups will be inserted here -->
+    </div>
+    
+    <div class="buttons">
+      <button id="reset-btn" class="btn btn-reset">New Game</button>
+      <button id="submit-btn" class="btn btn-reset" disabled="true">Submit</button>
+    </div>
+    
+    <div id="win-message" class="win-message" style="display: none;">
+      You won! All connections found!
+    </div>
+  </div>
+
+  <script>
+
+    
+window.allWords = [
+  "apple", "banana", "orange", "grape", "lemon", "melon", "peach", "plum",
+  "red", "blue", "green", "yellow", "purple", "orange", "black", "white",
+  "dog", "cat", "horse", "cow", "sheep", "goat", "pig", "chicken",
+  "run", "walk", "jump", "skip", "hop", "sprint", "jog", "dash",
+  "chair", "table", "desk", "sofa", "bed", "dresser", "bookshelf", "cabinet",
+  "sun", "moon", "star", "planet", "comet", "asteroid", "galaxy", "universe",
+  "river", "lake", "ocean", "sea", "pond", "stream", "creek", "bay",
+  "hammer", "saw", "drill", "screwdriver", "wrench", "pliers", "chisel", "mallet",
+  "heart", "club", "diamond", "spade", "ace", "king", "queen", "jack",
+  "spring", "summer", "fall", "winter", "season", "year", "month", "week",
+  "piano", "guitar", "violin", "drum", "flute", "trumpet", "saxophone", "clarinet",
+  "gold", "silver", "bronze", "copper", "iron", "steel", "aluminum", "platinum",
+  "football", "baseball", "basketball", "tennis", "golf", "hockey", "soccer", "volleyball",
+  "elephant", "giraffe", "lion", "tiger", "zebra", "monkey", "hippo", "rhino",
+  "rose", "tulip", "daisy", "lily", "orchid", "sunflower", "daffodil", "violet",
+  "oak", "maple", "pine", "birch", "willow", "cedar", "redwood", "spruce",
+  "bread", "pasta", "rice", "potato", "corn", "wheat", "barley", "oats",
+  "pizza", "burger", "taco", "sandwich", "sushi", "salad", "steak", "curry",
+  "chocolate", "vanilla", "strawberry", "mint", "caramel", "coffee", "lemon", "coconut",
+  "doctor", "nurse", "teacher", "lawyer", "engineer", "chef", "artist", "pilot",
+  "math", "science", "history", "english", "art", "music", "geography", "physics",
+  "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday", "weekend",
+  "january", "february", "march", "april", "may", "june", "july", "august",
+  "north", "south", "east", "west", "compass", "map", "direction", "navigation",
+  "diamond", "emerald", "ruby", "sapphire", "pearl", "jade", "opal", "amethyst",
+  "america", "europe", "asia", "africa", "australia", "antarctica", "arctic", "continent",
+  "mountain", "valley", "hill", "canyon", "cliff", "plateau", "peak", "ridge",
+  "king", "queen", "prince", "princess", "duke", "duchess", "lord", "lady",
+  "paper", "plastic", "glass", "metal", "wood", "cloth", "leather", "rubber",
+  "car", "truck", "bus", "train", "plane", "boat", "bike", "motorcycle",
+  "happy", "sad", "angry", "afraid", "excited", "bored", "tired", "energetic",
+  "hot", "cold", "warm", "cool", "freezing", "boiling", "tepid", "chilly",
+  "circle", "square", "triangle", "rectangle", "oval", "diamond", "pentagon", "hexagon",
+  "book", "magazine", "newspaper", "journal", "novel", "poem", "story", "article",
+  "rain", "snow", "sleet", "hail", "fog", "mist", "cloud", "storm",
+  "dollar", "euro", "pound", "yen", "rupee", "peso", "franc", "currency",
+  "fire", "water", "earth", "air", "element", "nature", "force", "energy",
+  "eye", "ear", "nose", "mouth", "hand", "foot", "arm", "leg"
+]
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log(window.allWords)
+      // Game state
+      let words = [];
+      let selectedWords = [];
+      let completedGroups = [];
+      let gameWon = false;
+      let hints = 0;
+      
+      // DOM elements
+      const gridEl = document.getElementById('grid');
+      const messageEl = document.getElementById('message');
+      const groupsContainerEl = document.getElementById('groups-container');
+      const submitBtn = document.getElementById('submit-btn');
+      const resetBtn = document.getElementById('reset-btn');
+      const winMessageEl = document.getElementById('win-message');
+      
+      // Color themes for different groups
+      const colors = ['yellow', 'green', 'blue', 'purple'];
+      
+      // Initialize the game
+      initGame();
+
+      
+      // Event listeners
+      submitBtn.addEventListener('click', submitGuess);
+      resetBtn.addEventListener('click', resetGame);
+      
+      // Initialize the game with words
+      function initGame() {
+  
+        const wordStore = [...window.allWords]
+        const newWords = []
+        for (let i = 0; i < 16; i++) {
+          const randomIndex = Math.floor(Math.random() * wordStore.length);
+    
+          newWords.push(wordStore[randomIndex]);
+    
+          // Remove the selected word from the copy to avoid duplicates
+          wordStore.splice(randomIndex, 1);
+        }
+
+        const wordLists = [
+          newWords.slice(0,4),
+          newWords.slice(4,8),
+          newWords.slice(8,12),
+          newWords.slice(12,16)
+        ];
+        
+
+        
+        // Flatten and shuffle the words
+        const allWords = wordLists.flat();
+        words = shuffleArray(allWords);
+        
+        renderGrid();
+      }
+      
+      // Render the grid of words
+      function renderGrid() {
+        gridEl.innerHTML = '';
+        
+        // First render completed groups
+        completedGroups.forEach((group, index) => {
+          const groupEl = document.createElement('div');
+          groupEl.className = `completed-group ${group.color}`;
+          
+          const titleEl = document.createElement('div');
+          titleEl.className = 'group-title';
+          titleEl.textContent = `Words`;
+          
+          const wordsContainer = document.createElement('div');
+          wordsContainer.className = 'group-words';
+          
+          group.words.forEach(word => {
+            const wordBtn = document.createElement('button');
+            wordBtn.textContent = word;
+            wordBtn.className = `word-btn ${group.color}`;
+            wordBtn.disabled = true;
+            wordsContainer.appendChild(wordBtn);
+          });
+          
+          groupEl.appendChild(titleEl);
+          groupEl.appendChild(wordsContainer);
+          gridEl.appendChild(groupEl);
+        });
+        
+        // Then render remaining words
+        const remainingWords = words.filter(word => 
+          !completedGroups.some(group => group.words.includes(word))
+        );
+        
+        remainingWords.forEach(word => {
+          const wordBtn = document.createElement('button');
+          wordBtn.textContent = word;
+          wordBtn.className = `word-btn ${selectedWords.includes(word) ? 'selected' : ''}`;
+          wordBtn.addEventListener('click', () => toggleWordSelection(word));
+          
+          gridEl.appendChild(wordBtn);
+        });
+      }
+      
+      // Handle word selection
+      function toggleWordSelection(word) {
+        // Skip if word is in a completed group
+        if (completedGroups.some(group => group.words.includes(word))) {
+          return;
+        }
+        
+        // Toggle selection
+        const wordIndex = selectedWords.indexOf(word);
+        if (wordIndex !== -1) {
+          // Remove word
+          selectedWords.splice(wordIndex, 1);
+          messageEl.textContent = 'Select 4 words that share a connection!';
+        } else {
+          // Add word
+          selectedWords.push(word);
+        }
+
+        if(selectedWords.length === 4) {
+          submitBtn.disabled = false;
+        } else {
+          submitBtn.disabled = true;
+        }
+        
+        renderGrid();
+      }
+
+      function submitGuess() {
+        // Check if we have 4 selected
+        if (selectedWords.length === 4) {
+          // Always count as correct!
+          const colorIndex = completedGroups.length % colors.length;
+          completedGroups.push({
+            words: [...selectedWords],
+            color: colors[colorIndex]
+          });
+          
+          selectedWords = [];
+          messageEl.textContent = 'Great job! That\'s correct!';
+          submitBtn.disabled = true;
+          
+          renderGrid();
+          //renderGroups();
+          
+          // Check if game is won
+          if (completedGroups.length === 4) {
+            gameWon = true;
+            messageEl.textContent = 'You won! Amazing connections!';
+            winMessageEl.style.display = 'block';
+            renderGrid();
+            //renderGroups();
+          }
+        }
+      }
+      
+      // Render completed groups in the groups container
+      function renderGroups() {
+        groupsContainerEl.innerHTML = '';
+        
+        completedGroups.forEach((group, index) => {
+          const groupEl = document.createElement('div');
+          groupEl.className = `group ${group.color}`;
+          
+          const titleEl = document.createElement('div');
+          titleEl.className = 'group-title';
+          titleEl.textContent = `CATEGORY ${index + 1}`;
+          
+          const wordsEl = document.createElement('div');
+          wordsEl.className = 'group-words';
+          wordsEl.textContent = group.words.join(' · ');
+          
+          groupEl.appendChild(titleEl);
+          groupEl.appendChild(wordsEl);
+          groupsContainerEl.appendChild(groupEl);
+        });
+      }
+
+      // Reset the game
+      function resetGame() {
+        // Create new game with random words
+        const newWords = [];
+        const tempWordStore = [...window.allWords];
+        
+        for (let i = 0; i < 16; i++) {
+          const randomIndex = Math.floor(Math.random() * tempWordStore.length);
+          newWords.push(tempWordStore[randomIndex]);
+          tempWordStore.splice(randomIndex, 1);
+        }
+        
+        words = newWords;
+        
+        selectedWords = [];
+        completedGroups = [];
+        gameWon = false;
+        hints = 0;
+        
+        messageEl.textContent = 'Select 4 words that share a connection!';
+        winMessageEl.style.display = 'none';
+        
+        renderGrid();
+        //renderGroups();
+      }
+      
+      // Utility function to shuffle an array
+      function shuffleArray(array) {
+        const newArray = [...array];
+        for (let i = newArray.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+        }
+        return newArray;
+      }
+    });
+  </script>
+</body>
+</html>
