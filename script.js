@@ -117,7 +117,7 @@ const generateCard = item => {
 	card.innerHTML = `
     <div class="flex gap-2">
         <div class="flex-1">
-            <h3 class="font-bold text-[#f43f5e]" style="font-size:clamp(1.3rem, 4vw, 1.8rem)">${item.title}</h3>
+            <h3 class="font-bold text-[#f43f5e]" style="font-size:clamp(1.3rem, 7vw, 1.8rem)">${item.title}</h3>
             <p class="font-semibold" style="font-size:clamp(1.1rem, 2.5vw, 1.4rem)">${item.subtitle}</p>
         </div>
 		<div class="flex items-start">
