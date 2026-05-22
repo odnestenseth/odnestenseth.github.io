@@ -121,7 +121,7 @@ const generateCard = item => {
             <p class="font-semibold" style="font-size:clamp(1.1rem, 2.5vw, 1.4rem)">${item.subtitle}</p>
         </div>
 		<div class="flex items-start">
-			<div class="text-2xl bg-[#bef264] text-[#064e3b] font-semibold p-2 md:p-4 rounded text-center">
+			<div class="text-2xl bg-[#bef264] text-[#064e3b] font-semibold p-4 md:p-4 rounded text-center">
 				${item.price}
 			</div>
 		</div>
