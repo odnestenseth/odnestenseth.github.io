@@ -116,11 +116,11 @@ const generateCard = item => {
 	card.className = 'mb-2 p-4 rounded-lg border border-gray-700 shadow-sm flex justify-between gap-6'
 	card.innerHTML = `
 <div class="flex-1">
-    <h3 class="text-lg font-bold text-[#f43f5e]">${item.title}</h3>
-    <p class="text-sm font-semibold">${item.subtitle}</p>
-    <p class="text-sm whitespace-pre-wrap mt-2 text-gray-400">${item.description}</p>
+    <h3 class="text-3xl font-bold text-[#f43f5e]">${item.title}</h3>
+    <p class="text-xl font-semibold">${item.subtitle}</p>
+    <p class="text whitespace-pre-wrap mt-2 text-gray-400">${item.description}</p>
     
-    <div class="flex flex-wrap gap-x-4 gap-y-1 pt-2 text-sm">
+    <div class="flex flex-wrap gap-x-4 gap-y-1 pt-2 text">
     <span class="flex items-center">
         <svg class="w-3.5 h-3.5 mr-1 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
         ${item.dateTimeString}
@@ -133,7 +133,7 @@ const generateCard = item => {
 </div>
 
 <div class="flex items-center h-full">
-    <div class="text-lg bg-[#bef264] text-[#064e3b] font-semibold p-4 rounded text-center">
+    <div class="text-2xl bg-[#bef264] text-[#064e3b] font-semibold p-4 rounded text-center">
         ${item.price}
     </div>
 </div>`
