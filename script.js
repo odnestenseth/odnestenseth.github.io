@@ -113,19 +113,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const generateCard = item => {
 	const card = document.createElement('div')
-	card.className = 'mb-2 p-4 rounded-lg border border-gray-700 shadow-sm flex flex-col justify-between gap-6'
+	card.className = 'mb-2 p-4 rounded-lg border border-gray-700 shadow-sm flex flex-col justify-between gap-2'
 	card.innerHTML = `
-    <div class="flex">
+    <div class="flex gap-2">
         <div class="flex-1">
-            <h3 class="text-3xl font-bold text-[#f43f5e]">${item.title}</h3>
-            <p class="text-xl font-semibold">${item.subtitle}</p>
+            <h3 class="font-bold text-[#f43f5e]" style="font-size:clamp(1.3rem, 4vw, 1.8rem)">${item.title}</h3>
+            <p class="font-semibold" style="font-size:clamp(1.1rem, 2.5vw, 1.4rem)">${item.subtitle}</p>
         </div>
-        <div class="text-2xl bg-[#bef264] text-[#064e3b] font-semibold p-4 rounded text-center">
-            ${item.price}
-        </div>
+		<div class="flex items-start">
+			<div class="text-2xl bg-[#bef264] text-[#064e3b] font-semibold p-2 md:p-4 rounded text-center">
+				${item.price}
+			</div>
+		</div>
     </div>
 
-    <div class="flex flex-wrap gap-x-4 gap-y-1 pt-2 text">
+    <div class="flex flex-wrap gap-2 text">
 	    <p class="text whitespace-pre-wrap mt-2 text-gray-400">${item.description}</p>
         <span class="flex items-center">
             <svg class="w-3.5 h-3.5 mr-1 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
