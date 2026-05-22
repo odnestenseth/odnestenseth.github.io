@@ -1,593 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109236495-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-109236495-1');
-
-
-    </script>
-
-    <meta charset="utf-8">
-    <title>Odne Stenseth</title>
-    <meta name="description"
-        content="International actor Odne Stenseth has performed in venues from London to Australia and is currently based in London and Norway">
-    <meta name="author" content="Odne Stenseth">
-
-    <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-
-    <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/skeleton.css">
-    <link rel="stylesheet" href="css/custom.css">
-
-    <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>ODNE STENSETH</title>
+    <link rel="stylesheet" href="./output.css">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.png">
 
 </head>
-
-<body>
-    <div class="container">
-        <div class="compcard">
-            <div class="row">
-                <div class="twelve columns">
-                    <div class="compcardgallerybig">
-                        <a href="images/Odne-2-WEB.jpg"><img src="images/Odne_2_WEB_progressive_thumbnail.jpg"
-                                alt="Headshot by Sam Mackay"></a>
-                    </div>
-                    <div class="compcardgallerysmalls">
-                        <div class="compcardgallerycolumn">
-                            <a href="images/Odne-1-WEB.jpg"><img src="images/Odne_1_WEB_progressive_thumbnail.jpg"
-                                    alt="Headshot by Sam Mackay"></a>
-                            <a href="images/Odne-4-WEB.jpg"><img src="images/Odne_4_WEB_progressive_thumbnail.jpg"
-                                    alt="Headshot by Sam Mackay"></a>
-                        </div>
-                        <div class="compcardgallerycolumn">
-                            <img src="images/OSnameboxbot.png" alt="Odne Stenseth">
-                            <a href="images/Odne-3-WEB.jpg"><img src="images/Odne_3_WEB_progressive_thumbnail.jpg"
-                                    alt="Headshot by Sam Mackay"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="twelve columns">
-                    <table class="stats u-full-width">
-                        <tbody>
-                            <tr>
-                                <td><strong>Age</strong></td>
-                                <td>24-32</td>
-                                <td><strong>Height</strong></td>
-                                <td>6'0''/183cm</td>
-                                <td><strong>Hair</strong></td>
-                                <td>Blonde</td>
-                                <td><strong>Build</strong></td>
-                                <td>Slim</td>
-                                <td><strong>Weight</strong></td>
-                                <td>152lbs/70kg</td>
-                                <td><strong>Eyes</strong></td>
-                                <td>Green</td>
-
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-
-        <div clas="row">
-            <div class="twelve rows">
-                <ul class="clean-nav">
-                    <li>
-                        <a class="button" paneid="actingpane">Acting</a>
-                    </li>
-                    <span>/</span>
-                    <li>
-                        <a class="button" paneid="teachingpane">Teaching</a>
-                    </li>
+<body class="text-white">
+    <!-- Header Section -->
+    <header class="fixed w-screen top-0 z-50 bg-[#0f172a] py-6">
+        <div class="container mx-auto px-4 pr-8 md:px-8 flex justify-between items-center ">
+            <a href="#" class="playfair text-4xl font-bold whitespace-nowrap pr-4">ODNE STENSETH</a>
+            <nav class="hidden md:block">
+                <ul class="flex justify-between w-[400px]">
+                    <li><a href="#about" class="text-gray-300 hover:text-white font-medium uppercase tracking-widest text-sm">About</a></li>
+                    <li><a href="#classes" class="text-gray-300 hover:text-white font-medium uppercase tracking-widest text-sm">Classes</a></li>
+                    <li><a href="#testimonials" class="text-gray-300 hover:text-white font-medium uppercase tracking-widest text-sm">Voices</a></li>
+                    <li><a href="#contact" class="text-gray-300 hover:text-white font-medium uppercase tracking-widest text-sm">Contact</a></li>
                 </ul>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none cursor-pointer">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu Overlay -->
+    <nav id="mobile-menu-overlay" class="md:hidden fixed top-0 left-0 w-full h-full bg-[#0f172a] flex flex-col items-center justify-center space-y-8 text-center z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+        <button id="mobile-menu-close" class="absolute top-6 right-6 text-white text-3xl cursor-pointer">&times;</button>
+        <a href="#about" class="text-gray-300 hover:text-white font-medium uppercase tracking-widest text-xl">About</a>
+        <a href="#classes" class="text-gray-300 hover:text-white font-medium uppercase tracking-widest text-xl">Classes</a>
+        <a href="#testimonials" class="text-gray-300 hover:text-white font-medium uppercase tracking-widest text-xl">Voices</a>
+        <a href="#contact" class="text-gray-300 hover:text-white font-medium uppercase tracking-widest text-xl">Contact</a>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="pt-48 pb-32 h-screen bg-[#0f172a] relative overflow-hidden">
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <h1 class="playfair text-7xl md:text-9xl font-bold leading-none mb-8">ODNE STENSETH</h1>
+                <div class="h-1 w-32 bg-[#f43f5e] mb-12"></div>
+                <p class="text-xl md:text-2xl font-light mb-12 max-w-xl text-gray-300">Discover the transformative power of the Meisner Technique.</p>
+                <a href="#classes" class="inline-block bg-[#f43f5e] text-white px-10 py-5 font-medium uppercase tracking-widest text-sm hover:bg-white hover:text-[#0f172a] transition duration-300">Begin</a>
             </div>
         </div>
+    </section>
 
-        <div class="row">
-            <div class="tab-content">
-                <div class="tab-pane" id="actingpane">
-                    <div class="row fade-in">
-                        <div class="twelve columns">
-                            <h4>Recent Credits</h4>
-                            <table class="u-full-width">
-                                <thead>
-                                    <tr>
-                                        <th>Year</th>
-                                        <th>Role</th>
-                                        <th>Production</th>
-                                        <th>Company/Director</th>
-                                        <th>Venue</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>2021</td>
-                                        <td>Den Allmektige Dommer</td>
-                                        <td>Toneroserommet</td>
-                                        <td>Døgnfluer</td>
-                                        <td>Cornerteateret</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2019-2020</td>
-                                        <td>Maze Master</td>
-                                        <td>The Crystal Maze LIVE Experience</td>
-                                        <td>Little Lion Entertainment/Neil Connolly & Matt Stubbs</td>
-                                        <td>West End</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2020</td>
-                                        <td>Antonin Artaud</td>
-                                        <td>MUSE</td>
-                                        <td>Julieta Kilgelmann</td>
-                                        <td>Central Saint Martins</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2019</td>
-                                        <td>Arnold</td>
-                                        <td>The Warmhouse</td>
-                                        <td>Foreign Affairs/Trine Garrett</td>
-                                        <td>The Rose Lipman Building</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2019</td>
-                                        <td>Thomas</td>
-                                        <td>Agata's Bubbles</td>
-                                        <td>María Camila García Rivera</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>2019</td>
-                                        <td>Forager</td>
-                                        <td>Alder</td>
-                                        <td>Vanda Ladeira</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>2019</td>
-                                        <td>The Botanist</td>
-                                        <td>Lost Lagoon</td>
-                                        <td>Bompas & Parr/Joe Hufton</td>
-                                        <td>W12</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2018</td>
-                                        <td>The Nutcracker</td>
-                                        <td>Disney's The Nutcracker: The Four Realms at Christmas</td>
-                                        <td>Bompas & Parr/Micha Mirto</td>
-                                        <td>Westfield London</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2018</td>
-                                        <td>Arnold</td>
-                                        <td>The Warmhouse</td>
-                                        <td>Foreign Affairs/Trine Garrett</td>
-                                        <td>The Rose Lipman Building</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2018</td>
-                                        <td>Jude Ascuro</td>
-                                        <td>Secret Cinema Presents: Romeo + Juliet</td>
-                                        <td>Thom Mitchell</td>
-                                        <td>Gunnersbury Park</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <div class="row fade-in">
-                        <div class="twelve columns">
-                            <h4>Training</h4>
-                            <table class="u-full-width">
-                                <thead>
-                                    <tr>
-                                        <th>Dates</th>
-                                        <th>Course Name</th>
-                                        <th>Company/Teacher</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Jan - Dec 2017</td>
-                                        <td>One Year Modular Course</td>
-                                        <td>The Impulse Company/Scott Williams</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="row fade-in">
-                        <div class="twelve columns">
-                            <h4>Training (Additional)</h4>
-                            <table class="u-full-width">
-                                <thead>
-                                    <tr>
-                                        <th>Dates</th>
-                                        <th>Course Name</th>
-                                        <th>Company/Teacher</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Nov 2019</td>
-                                        <td>Acting with Passion Tune-Up</td>
-                                        <td>Niki Flacks</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Mar 2019</td>
-                                        <td>Immersive Theatre Workshop</td>
-                                        <td>Les Enfants Terribles</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Apr - Jun 2018</td>
-                                        <td>The Given Set of Circumstances</td>
-                                        <td>The Impulse Company/Scott Williams</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Jun 2017</td>
-                                        <td>Acting with Passion</td>
-                                        <td>Niki Flacks</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Sep 2016</td>
-                                        <td>Body as Material</td>
-                                        <td>The Blue Room Theatre/Samantha Chester</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Jun 2016</td>
-                                        <td>Shakespeare Intensive</td>
-                                        <td>WAYTCO/Renato Fabretti, Gabrielle Metcalf, Nastassja Krüger</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Mar - May 2016</td>
-                                        <td>Performing Chekhov</td>
-                                        <td>WAYTCO/Emily Rose-Brennan</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <div class="row fade-in">
-                        <div class="twelve columns">
-                            <h4>Corporate Credits</h4>
-                            <table class="u-full-width">
-                                <thead>
-                                    <tr>
-                                        <th>Dates</th>
-                                        <th>Role</th>
-                                        <th>Event</th>
-                                        <th>Company</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>2019</td>
-                                        <td>Colour Scientist</td>
-                                        <td>The Institute of Primal Colour</td>
-                                        <td>Bompas & Parr</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2018</td>
-                                        <td>Host</td>
-                                        <td>Tesco Devour</td>
-                                        <td>Bompas & Parr</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2018</td>
-                                        <td>Various</td>
-                                        <td>Murdery Mystery Events</td>
-                                        <td>CCC Events</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2017-2018</td>
-                                        <td>Presenter</td>
-                                        <td>Chocolate-Making Workshops</td>
-                                        <td>MyChocolate</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Q4 2016</td>
-                                        <td>Roleplayer</td>
-                                        <td>Police Training Days</td>
-                                        <td>Roleplayers on Demand</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Nov 2015</td>
-                                        <td>Presenter</td>
-                                        <td>Mo Run 5k & 10K</td>
-                                        <td>Movember</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <div class="row fade-in">
-                        <div class="twelve columns">
-                            <h4>Languages and Accents</h4>
-                            <table class="u-full-width">
-                                <tbody>
-                                    <tr>
-                                        <td><b>English</b></td>
-                                        <td>RP</td>
-                                        <td>Standard American</td>
-                                        <td>Southern American</td>
-                                        <td>International</td>
-                                    </tr>
-                                    <tr>
-                                        <td><b>Norwegian</b></td>
-                                        <td>Bergensk</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <div class="row fade-in">
-                        <div class="twelve columns">
-                            <h4>Skills</h4>
-                            <table class="u-full-width">
-                                <tbody>
-                                    <tr>
-                                        <td>Stage Combat (unarmed)</td>
-                                        <td>Improv Comedy</td>
-                                        <td>Spoken Word Performance</td>
-                                        <td>Full Driver's License</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
+    <!-- About Section -->
+    <section id="about" class="pt-16 pb-0 md:py-32 bg-[#1e293b] scroll-mt-20">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex flex-col md:flex-row items-center md:space-x-20">
+                <div class="md:w-1/2 relative mb-10 mt-0 md:mb-0">
+                    <div class="bg-[#f43f5e] absolute -inset-6 transform -rotate-2"></div>
+                    <img src="./img/DSC01817.jpg" alt="Acting workshop" class="relative z-10 w-full h-auto">
                 </div>
-                <div class="tab-pane" id="teachingpane">
-                    <div class="row fade-in">
-                        <div class="twelve columns">
-                            <blockquote>"Really professional, fun and easy to learn from ... the class is an absolute
-                                joy"
-                                <footer>- Noga Flaishon, Actor</footer>
-                            </blockquote>
-                            <blockquote>"What I enjoy about Odne's class is how gentle his approach is and how great he
-                                is at explaining the technique. The combination ensures a safe playground for me to
-                                explore my emotions, but also gives clarity to how I can improve and grow. I always look
-                                forward to working with Odne!"
-                                <footer>- Kat, Actor</footer>
-                            </blockquote>
-                            <blockquote>"He is adamant at making sure that it is the actor who must feel comfortable
-                                enough to discover the answers within themselves through this process. His guidance and
-                                style of teaching make it all the more exciting and effective in helping us reach a
-                                point of living in the moment... I highly recommend his services if you seriously want
-                                to take your craft to the next level."
-                                <footer>- Matthew Mélone, Actor</footer>
-                            </blockquote>
-                        </div>
-                    </div>
-                    <div class="row fade-in">
-                        <div class="twelve columns">
-                            <p>Odne has been teaching the Meisner technique since 2018. Based on a series of
-                                progressive exercises, the Meisner technique is unique in its ability to train an actor
-                                in getting out of their own head, responding truthfully to what is happening in the
-                                moment, and creating performances grounded in a sense of expressive freedom</p>
-                            <p>At the heart of the technique is the <b>Repetition Exercise.</b> The exercise elevates
-                                our craft by forcing us to abstract from the text and focus on the true currency of the
-                                actor: <em>behaviour</em>. Within the exercise each student is taught to observe clearly
-                                the behaviour of the other actor(s) and respond impulsively. Not only does the exercise
-                                build these muscles of observing and responding but it also continually puts us face to
-                                face with our own barriers, giving us the opportunity to break past them and continually
-                                develop as artists. While it is the job of the student to overcome the barriers in their
-                                work it is the job of the teacher to provide a safe and encouraging space to do so, and
-                                the values of patience, self-compassion, and taking charge of your own journey as an
-                                actor are essential elements of Odne's teaching style.</p>
-                            <p>Odne has taught private and public classes as well as regular drop-in classes. He has
-                                taught at Royal Central School of Speech and Drama, Giles Foreman Centre for Acting, Fourth Monkey, and The Impulse Company, among others. He has also worked with second year students at Trinity Laban on a
-                                project combining Meisner with contemporary dance.</p>
-                            <p>For any enquiries regarding private lessons for small groups, ad-hoc courses for theatre
-                                companies, or to have Odne teach at your academic institution get in touch using the
-                                form below</p>
-                        </div>
-                    </div>
-                    <div class="row fade-in">
-                        <div class="twelve columns">
-                            <img class="bodyimage" src="images/teachingsmall1.jpg">
-                            <img class="bodyimage" src="images/teachingsmall2.jpg">
-                            <img class="bodyimage" src="images/teachingsmall3.jpg">
-                        </div>
-                    </div>
+                <div class="md:w-1/2 mb-16 md:mb-0">
+                    <h2 class="playfair text-5xl md:text-6xl font-bold mb-8">MEISNER TECHNIQUE</h2>
+                    <div class="h-1 w-24 bg-[#f43f5e] mb-12"></div>
+                    <p class="text-xl leading-relaxed mb-8 text-gray-300">The Meisner Technique empowers actors to get out of their heads and access a profound sense of truth in their work by being present and listening.</p>
+                    <p class="text-xl leading-relaxed mb-8 text-gray-300">The technique employs practical and progressive exercises that train actors to respond truthfully in the moment, liberating them from self-consciousness. At its core is the Repetition Exercise, which teaches actors to observe precisely and respond instinctively to others' behavior rather than fixating on text.</p>
+                    <p class="text-xl leading-relaxed text-gray-300">My classes offer a supportive environment where you can take risks, embrace vulnerability, and develop the authenticity that defines exceptional acting.</p>
                 </div>
-                <div class="tab-pane" id="alderpane">
-                    <div class="row">
-                        <div class="twelve columns">
-                            <blockquote>"The nine minutes seventeen seconds long movie is nowhere just a cinema but an
-                                experience of a lifetime. The film transcends us to the world where expressions and the
-                                narration of the mundane plot plays the real game."
-                                <footer>- Beyond The Curve International Film Festival</footer>
-                            </blockquote>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="twelve columns">
-                            <blockquote>The guardian spirit of the forest, Alder, meets a young forager that opens the
-                                possibility of changing her destiny. Alder, taking the shape of a female-tree form with
-                                the Alder tree's inner qualities of protection against malevolent fairies and humans,
-                                longs for being loved and for the intimacy of a touch. Very aware of the high price to
-                                pay for falling in love with a human her dilemma and vulnerability is exposed.
-                                Attempting to protect the forest from destruction she encounters him in the woods and
-                                seduces him, but will her heart overcome her loyalty to the forest?</blockquote>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="twelve columns">
-                            <p>The Magical Realist short drama 'Alder' juxtaposes our current ecological dilemma against
-                                the univeral human experience: love. In her loneliness and yearning for connection the
-                                forest spirit Alder is forced to answer the question, what do we when we are forced to
-                                choose between duty and love? The narrative also invites the viewer to see our
-                                relationship with nature from nature's point of view. What if nature could retaliate
-                                directly? Or even use us for its aims?</p>
-                            <p>Since it's release 'Alder' has had great success at a number of film festivals across the
-                                globe, from London and Florence, to Los Angeles and even Bhutan </p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="twelve columns">
-                            <div class='embed-container'>
-                                <iframe src="https://player.vimeo.com/video/344117192?h=acc4380a09&color=ffffff"
-                                    frameborder="0" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="twelve columns">
-                            <div class="laurel">
-                                <img class="laurelimage" src="images/laurel_raindance.JPG">
-                                <p>London</p>
-                            </div>
-                            <div class="laurel">
-                                <img class="laurelimage" src="images/laurel_accolade.JPG">
-                                <p>San Diego</p>
-                            </div>
-                            <div class="laurel">
-                                <img class="laurelimage" src="images/laurel_arff_berlin.png">
-                                <p>Berlin</p>
-                            </div>
-                            <div class="laurel">
-                                <img class="laurelimage" src="images/laurel_festigious.png">
-                                <p>Los Angeles</p>
-                            </div>
-                            <div class="laurel">
-                                <img class="laurelimage" src="images/laurel_nyca.jpg">
-                                <p>New York</p>
-                            </div>
-                            <div class="laurel">
-                                <img class="laurelimage" src="images/laurel_florence.png">
-                                <p>Florence</p>
-                            </div>
-                            <div class="laurel">
-                                <img class="laurelimage" src="images/laurel_ahith.png">
-                                <p>San Francisco</p>
-                            </div>
-                            <div class="laurel">
-                                <img class="laurelimage" src="images/laurel_arff_amsterdam.jpg">
-                                <p>Amsterdam</p>
-                            </div>
-                            <div class="laurel">
-                                <img class="laurelimage" src="images/laurel_globalshorts.png">
-                                <p>Los Angeles</p>
-                            </div>
-                            <div class="laurel">
-                                <img class="laurelimage" src="images/laurel_fhiff.png">
-                                <p>Venice</p>
-                            </div>
-                            <div class="laurel">
-                                <img class="laurelimage" src="images/laurel_diff.png">
-                                <p>Bhutan</p>
-                            </div>
-                            <div class="laurel">
-                                <img class="laurelimage" src="images/laurel_greatlakes.png">
-                                <p>Pennsylvania</p>
-                            </div>
-                            <div class="laurel">
-                                <img class="laurelimage" src="images/laurel_lifa.png">
-                                <p>London</p>
-                            </div>
-                            <div class="laurel">
-                                <img class="laurelimage" src="images/laurel_mwiff.png">
-                                <p>India</p>
-                            </div>
 
-                            <div class="laurel">
-                                <img class="laurelimage" src="images/laurel_oniros.png">
-                                <p>Italy</p>
-                            </div>
-                            <div class="laurel">
-                                <img class="laurelimage" src="images/laurel_playshort.png">
-                                <p>Portugal</p>
-                            </div>
-
-                            <div class="laurel">
-                                <img class="laurelimage" src="images/laurel_speculative.png">
-                                <p>Seattle</p>
-                            </div>
-                            <div class="laurel">
-                                <img class="laurelimage" src="images/laurel_tgiff.png">
-                                <p>Romania</p>
-                            </div>
-                            <div class="laurel">
-                                <img class="laurelimage" src="images/laurel_vegas.png">
-                                <p>Las Vegas</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
+        </div>
+    </section>
 
-            <div id="contact" class="row contactdetails fade-in">
-                <div class="eight columns representation">
-                    <h4>Representation</h4>
-                    <div>
-                        <a href="https://www.4wallsmanagement.com/"><img src="images/4wallslogo.png"
-                                alt="4 Walls Management Logo"></a>
-                    </div>
-                    <div>
-                        <p>4 Walls Management</p>
-                        <p>The Old School // Princeton Street</p>
-                        <p>London WC1 4AY</p>
-                        <p>+44 (0) 207 127 5172</p>
-                        <p><a href="https://www.4wallsmanagement.com/">www.4wallsmanagement.com</a></p>
-                    </div>
+    <!-- About Me Section -->
+    <section class="py-16 md:py-32 bg-[#0f172a] scroll-mt-20">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex flex-col md:flex-row items-center md:space-x-20">
+                <div class="md:w-2/3 mb-16 md:mb-0">
+                    <h2 class="playfair text-5xl md:text-6xl font-bold mb-8">ABOUT ME</h2>
+                    <div class="h-1 w-24 bg-[#f43f5e] mb-12"></div>
+                    <p class="text-xl leading-relaxed mb-8 text-gray-300">I have been teaching the Meisner technique since 2018 at prestigious institutions including Royal Central School of Speech and Drama, Rose Bruford College, Giles Foreman Centre for Acting, Fourth Monkey, Bristol School of Acting, and The Impulse Company. My work extends to bespoke training programmes, private coaching, and accessible drop-in classes.</p>
+                    <p class="text-xl leading-relaxed text-gray-300">It is of utmost importance to me that I create a safe, encouraging learning environment where students can identify and overcome their artistic barriers. My teaching emphasizes patience, self-compassion, and ownership of one's journey as an actor.</p>
                 </div>
-                <div class="four columns contact">
-                    <h4>Contact Me</h4>
-                    <button class="button button-primary" id="contactMeButton">Contact</button>
-                </div>
-            </div>
-
-            <div id="overlay" class="overlay">
-                <div class="popup">
-                    <h4>Contact</h4>
-                    <button class="close" id="closeContactForm">&times;</button>
-                    <form id="contactForm">
-                        <label for="name">Name</label>
-                        <input id="name" type="text" name="name">
-
-                        <label for="email">Email</label>
-                        <input id="email" type="email" name="_replyto">
-
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message"></textarea>
-                        <input class="button-primary" type="submit" value="Send" />
-                    </form>
-                    <p id="thankYou">Thank you for getting in touch!</p>
+                <div class="md:w-1/3 relative">
+                    <div class="bg-[#f43f5e] absolute -inset-5 transform rotate-2"></div>
+                    <img src="./img/Odne-3-WEB.jpg" alt="Acting workshop" class="relative z-10 w-90 h-auto m-auto">
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <script src="js/scripts.js"></script>
+        <!-- Quote Section -->
+        <section class="py-16 md:py-32 bg-[#1e293b] text-white relative overflow-hidden">
+            <div class="container mx-auto px-4 md:px-8 relative z-10">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="playfair text-4xl md:text-5xl font-bold mb-8">"Acting is living truthfully under given circumstances"</h2>
+                    <div class="h-1 w-24 bg-[#f43f5e] mx-auto mb-8"></div>
+                    <p class="text-2xl italic font-light text-gray-300">— Sanford Meisner</p>
+                </div>
+            </div>
+        </section>
+
+    <!-- Classes Section -->
+    <section id="classes" class="py-16 md:py-32 bg-[#0f172a] scroll-mt-20">
+        <div class="container mx-auto px-4 md:px-8">
+            <h2 class="playfair text-5xl md:text-6xl font-bold text-center mb-8">CLASSES</h2>
+            <div class="h-1 w-24 bg-[#f43f5e] mx-auto mb-24"></div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Drop-In Classes -->
+                <div class="border border-gray-700 p-10 hover-scale cursor-pointer flex flex-col h-full">
+                    <div class="flex-grow">
+                        <div class="text-6xl font-bold text-[#f43f5e] mb-8">01</div>
+                        <h3 class="playfair text-3xl font-bold mb-6">Drop-In Sessions</h3>
+                        <p class="mb-8 text-gray-300 text-lg">Sharpen your repetition skills with this drop-in class. No preparation needed, just rock up!</p>
+                        <ul class="space-y-4 mb-8 text-gray-300">
+                            <li class="flex items-start">
+                                <span class="text-[#f43f5e] mr-3">—</span>
+                                <span>2-3 hour intensive workshops</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#f43f5e] mr-3">—</span>
+                                <span>Open to anyone who has done an introductory class in Meisner's technique</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#f43f5e] mr-3">—</span>
+                                <span>The ideal way to maintain momentum in your craft</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto">
+                        <button id="show-drop-ins" class="inline-block border border-white text-white px-8 py-4 uppercase text-sm tracking-widest font-medium hover:bg-[#f43f5e] hover:border-[#f43f5e] transition duration-300">See upcoming drop-ins</button>
+                    </div>
+                </div>
+                
+                <!-- Short Courses -->
+                <div class="border border-gray-700 p-10 hover-scale cursor-pointer flex flex-col h-full">
+                    <div class="flex-grow">
+                        <div class="text-6xl font-bold text-[#f43f5e] mb-8">02</div>
+                        <h3 class="playfair text-3xl font-bold mb-6">Short Courses</h3>
+                        <p class="mb-8 text-gray-300 text-lg">Structured courses providing a comprehensive foundation in the Meisner technique and methods for working with authentic emotional connection.</p>
+                        <ul class="space-y-4 mb-8 text-gray-300">
+                            <li class="flex items-start">
+                                <span class="text-[#f43f5e] mr-3">—</span>
+                                <span>Weekly classes for all experience levels</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#f43f5e] mr-3">—</span>
+                                <span>Learn to ground your performance in a sense of truth</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#f43f5e] mr-3">—</span>
+                                <span>Develop the ability to be fully present with your scene partners</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto">
+                        <button id="show-short-courses" class="inline-block border border-white text-white px-8 py-4 uppercase text-sm tracking-widest font-medium hover:bg-[#f43f5e] hover:border-[#f43f5e] transition duration-300">See upcoming courses</button>
+                    </div>
+                </div>
+                
+                <!-- Bespoke Programs -->
+                <div class="border border-gray-700 p-10 hover-scale cursor-pointer flex flex-col h-full">
+                    <div class="flex-grow">
+                        <div class="text-6xl font-bold text-[#f43f5e] mb-8">03</div>
+                        <h3 class="playfair text-3xl font-bold mb-6">Bespoke Programs</h3>
+                        <p class="mb-8 text-gray-300 text-lg">Tailored coaching for professionals, emerging actors, or drama schools seeking specialized training.</p>
+                        <ul class="space-y-4 mb-8 text-gray-300">
+                            <li class="flex items-start">
+                                <span class="text-[#f43f5e] mr-3">—</span>
+                                <span>Customized curriculum based on your specific goals</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#f43f5e] mr-3">—</span>
+                                <span>Flexible group sizes from individuals to full ensembles</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#f43f5e] mr-3">—</span>
+                                <span>Adaptable scheduling to fit your production/term timeline</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto">
+                        <button id="show-bespoke" class="inline-block border border-white text-white px-8 py-4 uppercase text-sm tracking-widest font-medium hover:bg-[#f43f5e] hover:border-[#f43f5e] transition duration-300">Read more</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+            <!-- Class Listing Sections -->
+            <div id="class-listings" class="mt-24 mx-auto w-[90%] max-w-[800px]">
+                <!-- Drop-in Classes Listing -->
+                <div id="drop-ins-listing" class="hidden">
+                    <h3 class="playfair text-4xl font-bold mb-10 text-center">Upcoming Drop-in Sessions</h3>
+                    <div id="drop-ins-collection" class="border border-gray-700 p-5 bg-gray-900 overflow-y-scroll max-h-[500px]"></div>
+                    <div id="drop-ins-collection-no-class-msg" class="text-center py-8 hidden">
+                        <p class="text-xl text-gray-300">No upcoming drop-in sessions scheduled at this time. Please check back soon or contact me for more information.</p>
+                    </div>
+                </div>
+                
+                <!-- Short Courses Listing -->
+                <div id="short-courses-listing" class="hidden">
+                    <h3 class="playfair text-4xl font-bold mb-10 text-center">Upcoming Short Courses</h3>
+                    <div id="short-courses-collection" class="border border-gray-700 p-5 bg-gray-900 overflow-y-scroll max-h-[500px]"></div>
+                    <div id="short-term-collection-no-class-msg" class="text-center py-8 hidden">
+                        <p class="text-xl text-gray-300">No upcoming short courses scheduled at this time. Please check back soon or contact me for more information.</p>
+                    </div>
+                </div>
+                
+                <!-- Bespoke Programs Information -->
+                <div id="bespoke-info" class="hidden">
+                    <h3 class="playfair text-4xl font-bold mb-10 text-center">Bespoke Training Programs</h3>
+                    <div class="bg-gray-900 border border-gray-700 p-12 max-w-3xl mx-auto">
+                        <p class="text-xl text-gray-300 mb-6">My bespoke programs are tailored to meet the specific needs of your organization, company, or individual goals.</p>
+                        <p class="text-xl text-gray-300 mb-6">Whether you're a drama school seeking specialized training for your students, a production company preparing actors for specific roles, or an individual artist looking for personalized coaching, I can design a program that serves your exact requirements.</p>
+                        <p class="text-xl text-gray-300 mb-10">Contact me below to discuss your needs and how I can create a custom curriculum that works for you.</p>
+                        <a href="#contact" class="inline-block border border-white text-white px-8 py-4 uppercase text-sm tracking-widest font-medium hover:bg-[#f43f5e] hover:border-[#f43f5e] transition duration-300">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 md:py-32 bg-[#1e293b] scroll-mt-20">
+        <div class="container mx-auto px-4 md:px-8">
+            <h2 class="playfair text-5xl md:text-6xl font-bold text-center mb-8">VOICES</h2>
+            <div class="h-1 w-24 bg-[#f43f5e] mx-auto mb-24"></div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="p-10 border border-gray-700 group relative overflow-hidden">
+                    <div class="text-4xl text-[#f43f5e] mb-6">"</div>
+                    <p class="text-xl mb-12 text-gray-300">He is adamant at making sure that it is the actor who must feel comfortable enough to discover the answers within themselves through this process. His guidance and style of teaching make it all the more exciting and effective in helping us reach a point of living in the moment... I highly recommend his services if you seriously want to take your craft to the next level.</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-[#f43f5e] mr-4"></div>
+                        <div>
+                            <p class="font-medium">Matthew Mélone</p>
+                            <p class="text-sm text-gray-400">Actor</p>
+                        </div>
+                    </div>
+                </div>
+
+                                
+                <div class="p-10 border border-gray-700 group relative overflow-hidden">
+                    <div class="text-4xl text-[#f43f5e] mb-6">"</div>
+                    <p class="text-xl mb-12 text-gray-300">Really professional, fun and easy to learn from ... the class is an absolute joy".</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-[#f43f5e] mr-4"></div>
+                        <div>
+                            <p class="font-medium">Noga Flaishon</p>
+                            <p class="text-sm text-gray-400">Actor</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="p-10 border border-gray-700 group relative overflow-hidden">
+                    <div class="text-4xl text-[#f43f5e] mb-6">"</div>
+                    <p class="text-xl mb-12 text-gray-300">What I enjoy about Odne's class is how gentle his approach is and how great he is at explaining the technique. The combination ensures a safe playground for me to explore my emotions, but also gives clarity to how I can improve and grow. I always look forward to working with Odne!</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-[#f43f5e] mr-4"></div>
+                        <div>
+                            <p class="font-medium">Kat</p>
+                            <p class="text-sm text-gray-400">Actor</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-32 bg-[#0f172a] scroll-mt-20">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="playfair text-5xl md:text-6xl font-bold text-center mb-8">CONTACT</h2>
+                <div class="h-1 w-24 bg-[#f43f5e] mx-auto mb-24"></div>
+                
+                <form class="border border-gray-700 p-12">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+                        <div>
+                            <label for="name" class="block text-sm uppercase tracking-widest font-medium mb-4">Name</label>
+                            <input type="text" id="name" class="w-full bg-transparent border-b-2 border-gray-600 py-3 focus:border-[#f43f5e] focus:outline-none text-xl" required>
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm uppercase tracking-widest font-medium mb-4">Email</label>
+                            <input type="email" id="email" class="w-full bg-transparent border-b-2 border-gray-600 py-3 focus:border-[#f43f5e] focus:outline-none text-xl" required>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-12">
+                        <label for="message" class="block text-sm uppercase tracking-widest font-medium mb-4">Message</label>
+                        <textarea id="message" rows="4" class="w-full bg-transparent border-b-2 border-gray-600 py-3 focus:border-[#f43f5e] focus:outline-none text-xl" required></textarea>
+                    </div>
+                    
+                    <button id="contact-form-submit" type="submit" class="w-full bg-[#f43f5e] text-white px-8 py-6 font-medium uppercase tracking-widest text-sm hover:bg-white hover:text-[#0f172a] transition duration-300">Send Message</button>
+                    <div id="contact-result-msg" class="opacity-0 transition-opacity duration-250 ease-in-out mt-4"></div>
+                </form>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#1e293b] text-white py-4 border-t border-gray-800 ">
+        <div class="container mx-auto px-4">
+            <div class="w-full md:max-w-fit mx-auto">
+            <script async src="https://eomail5.com/form/fea14b26-3586-11ef-a765-1966d8196aff.js" data-form="fea14b26-3586-11ef-a765-1966d8196aff"></script>
+        </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
 </body>
-
-</html>

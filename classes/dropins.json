@@ -1,0 +1,32 @@
+[
+	{
+		"title": "OFF THE PAGE",
+		"subtitle": "A Meisner text drop-in",
+		"description": "No prep required. Scripts provided. Just you exercising your muscles for being present while working with text.\n\nNo need to book just show up on the day",
+		"timestamp": "2026-06-04T18:30:00Z",
+		"dateTimeString": "Thursday June 4th, 6:30 - 9:00PM",
+		"location": "Studio 8, Theatre Deli, Leadenhall Street",
+		"googleMapsURL": "https://maps.app.goo.gl/2pMQj9ZFzZohvemV9",
+		"price": "£25"
+	},
+	{
+		"title": "OFF THE PAGE",
+		"subtitle": "A Meisner text drop-in",
+		"description": "No prep required. Scripts provided. Just you exercising your muscles for being present while working with text.\n\nNo need to book just show up on the day",
+		"timestamp": "2026-06-11T18:30:00Z",
+		"dateTimeString": "Thursday June 11th, 6:30 - 9:00PM",
+		"location": "Studio 27, Theatre Deli, Leadenhall Street",
+		"googleMapsURL": "https://maps.app.goo.gl/2pMQj9ZFzZohvemV9",
+		"price": "£25"
+	},
+	{
+		"title": "OFF THE PAGE",
+		"subtitle": "A Meisner text drop-in",
+		"description": "No prep required. Scripts provided. Just you exercising your muscles for being present while working with text.\n\nNo need to book just show up on the day",
+		"timestamp": "2026-06-25T18:30:00Z",
+		"dateTimeString": "Thursday June 25th, 6:30 - 9:00PM",
+		"location": "TBD",
+		"googleMapsURL": "",
+		"price": "£25"
+	}
+]
